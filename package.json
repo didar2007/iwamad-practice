@@ -1,0 +1,26 @@
+{
+  "name": "iwamad-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite week-01",
+    "build": "vite build week-01",
+    "preview": "vite preview week-01"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didar2007/iwamad-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/didar2007/iwamad-practice/issues"
+  },
+  "homepage": "https://github.com/didar2007/iwamad-practice#readme",
+  "devDependencies": {
+    "vite": "^8.3.0"
+  }
+}
