@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite week-01",
-    "build": "vite build week-01",
-    "preview": "vite preview week-01"
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
   },
   "repository": {
     "type": "git",
