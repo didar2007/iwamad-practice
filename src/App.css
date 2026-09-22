@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #172033;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #111827, #1e3a8a);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 3px solid #60a5fa;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    color: #bfdbfe;
+    font-size: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #dbeafe;
+}
+
+nav a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 45px 20px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 520px;
+    background: linear-gradient(145deg, #ffffff, #f8fbff);
+    border: 1px solid #dbeafe;
+    margin: 10px;
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.12);
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(30, 58, 138, 0.18);
+}
+
+.profile-card img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 15px;
+    border: 5px solid #dbeafe;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.profile-card h2 {
+    margin-top: 20px;
+    color: #1e3a8a;
+    font-size: 26px;
+}
+
+.profile-card p {
+    line-height: 1.6;
+}
+
+main > section:not(.profile-card) {
+    width: 100%;
+    max-width: 520px;
+    background-color: white;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+main > section:not(.profile-card) h2 {
+    color: #1e3a8a;
+    margin-top: 0;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills li {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #dbeafe;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 11px;
+    border-top: 1px solid #dbeafe;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+textarea {
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.like-button {
+    margin-top: 20px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+    transition: all 0.25s ease;
+}
+
+.like-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.like-button.liked {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+}
+
+footer {
+    background-color: #111827;
+    color: #94a3b8;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 375px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 25px 10px;
+    }
+
+    .profile-card {
+        padding: 22px;
+        margin: 5px;
+    }
+
+    .profile-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    main > section:not(.profile-card) {
+        padding: 20px;
+    }
+
+    #skills li {
+        font-size: 13px;
+    }
+}
