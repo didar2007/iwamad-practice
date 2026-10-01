@@ -1,7 +1,8 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import oxlint from "vite-plugin-oxlint";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  base: "/iwamad-practice/",
+  plugins: [react(), oxlint()],
+});
