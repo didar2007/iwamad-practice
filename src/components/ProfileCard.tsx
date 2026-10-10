@@ -1,5 +1,7 @@
+
 import profilePhoto from "../assets/5258035342319755548.jpg";
 import LikeButton from "./LikeButton";
+import Card from "./ui/Card";
 
 type ProfileCardProps = {
   title: string;
@@ -8,15 +10,17 @@ type ProfileCardProps = {
 
 function ProfileCard({ title, description }: ProfileCardProps) {
   return (
-    <section id="about" className="profile-card">
-      <img src={profilePhoto} alt="Didar Kalabayev" />
+    <Card>
+      <div id="about" className="profile-card">
+        <img src={profilePhoto} alt="Didar Kalabayev" />
 
-      <h2>{title}</h2>
+        <h2>{title}</h2>
 
-      <p>{description}</p>
+        <p>{description}</p>
 
-      <LikeButton />
-    </section>
+        <LikeButton />
+      </div>
+    </Card>
   );
 }
 

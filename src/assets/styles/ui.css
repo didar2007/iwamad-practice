@@ -1,22 +1,14 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--color-surface);
-  color: var(--color-text);
-  min-height: 100vh;
-}
 
 /* Header */
 
 header {
-  background: var(--color-surface);
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
   padding: var(--space-4);
   border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 .header-content {
@@ -42,22 +34,15 @@ header {
   height: 32px;
 }
 
-.brand h1 {
+header h1 {
   margin: 0;
   font-size: 20px;
   color: var(--color-text);
 }
 
-.brand p {
+header p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 14px;
-}
-
-.likes-counter {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 14px;
 }
 
 header nav {
@@ -75,6 +60,10 @@ header nav a {
   border-radius: var(--radius-md);
 }
 
+header nav a.active {
+  font-weight: 600;
+}
+
 header nav a:hover {
   background: var(--color-surface);
 }
@@ -84,105 +73,121 @@ header nav a:focus-visible {
   outline-offset: 3px;
 }
 
-header nav a.active {
-  color: var(--color-primary);
-}
-
 /* Main */
 
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-6);
-  padding: var(--space-6) var(--space-4);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6);
 }
 
-/* Profile Card */
+/* Card */
+
+.ui-card {
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
 
 .profile-card {
   width: 100%;
   max-width: 520px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .profile-card img {
   width: 210px;
   height: 210px;
-  border-radius: 50%;
   object-fit: cover;
-  margin-top: var(--space-2);
-  border: 5px solid var(--color-border);
+  border-radius: 50%;
 }
 
 .profile-card h2 {
-  margin-top: var(--space-4);
+  margin: var(--space-4) 0;
   color: var(--color-text);
-  font-size: 26px;
 }
 
 .profile-card p {
+  color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+/* Buttons */
+
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  font: inherit;
+  cursor: pointer;
+}
+
+.ui-button--primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.ui-button--outlined {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.ui-button:hover {
+  opacity: 0.9;
+}
+
+.ui-button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 /* Sections */
 
 main > section {
-  width: 100%;
-  max-width: 520px;
   background: var(--color-surface);
-  padding: var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
 
 main > section h2 {
   color: var(--color-text);
-  margin-top: 0;
 }
 
-/* Skills */
+/* Skills and Tags */
 
 #skills ul {
-  list-style: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  padding: 0;
+  list-style: none;
 }
 
 #skills li {
   margin: 0;
 }
 
-/* Table */
-
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
-  border-radius: var(--radius-md);
+.ui-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2);
   border: 1px solid var(--color-border);
-}
-
-th {
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  padding: var(--space-2);
-}
-
-td {
-  padding: var(--space-2);
-  border-top: 1px solid var(--color-border);
-}
-
-tr:nth-child(even) {
+  border-radius: 999px;
   background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
 }
 
-/* Contact Form */
+/* Forms */
 
 form {
   display: flex;
@@ -196,9 +201,9 @@ textarea {
   padding: var(--space-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  font-family: Arial, sans-serif;
   color: var(--color-text);
   background: var(--color-surface);
+  font: inherit;
 }
 
 input:focus-visible,
@@ -215,18 +220,12 @@ textarea {
 /* Footer */
 
 footer {
-  background: var(--color-text);
-  color: var(--color-on-primary);
-  text-align: center;
   padding: var(--space-4);
-  margin-top: auto;
+  text-align: center;
+  color: var(--color-text-muted);
 }
 
-footer p {
-  margin: 0;
-}
-
-/* Mobile first */
+/* Mobile-first responsive layout */
 
 @media (min-width: 640px) {
   header {
@@ -265,9 +264,5 @@ footer p {
   .profile-card img {
     width: 210px;
     height: 210px;
-  }
-
-  main > section {
-    padding: var(--space-6);
   }
 }

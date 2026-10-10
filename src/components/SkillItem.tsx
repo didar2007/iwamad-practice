@@ -1,9 +1,11 @@
+import Tag from "./ui/Tag";
+
 type SkillItemProps = {
   skill: string;
 };
 
 function SkillItem({ skill }: SkillItemProps) {
-  return <li>{skill}</li>;
+  return <Tag>{skill}</Tag>;
 }
 
 export default SkillItem;
