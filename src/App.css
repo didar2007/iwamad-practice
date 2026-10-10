@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* Header */
+
+header {
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.brand p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.likes-counter {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+header nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+}
+
+header nav a:hover {
+  background: var(--color-surface);
+}
+
+header nav a:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+header nav a.active {
+  color: var(--color-primary);
+}
+
+/* Main */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-4);
+}
+
+/* Profile Card */
+
+.profile-card {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+.profile-card img {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: var(--space-2);
+  border: 5px solid var(--color-border);
+}
+
+.profile-card h2 {
+  margin-top: var(--space-4);
+  color: var(--color-text);
+  font-size: 26px;
+}
+
+.profile-card p {
+  line-height: 1.6;
+}
+
+/* Sections */
+
+main > section {
+  width: 100%;
+  max-width: 520px;
+  background: var(--color-surface);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+main > section h2 {
+  color: var(--color-text);
+  margin-top: 0;
+}
+
+/* Skills */
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+#skills li {
+  margin: 0;
+}
+
+/* Table */
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  padding: var(--space-2);
+}
+
+td {
+  padding: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+tr:nth-child(even) {
+  background: var(--color-surface);
+}
+
+/* Contact Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Footer */
+
+footer {
+  background: var(--color-text);
+  color: var(--color-on-primary);
+  text-align: center;
+  padding: var(--space-4);
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Mobile first */
+
+@media (min-width: 640px) {
+  header {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .brand p {
+    display: none;
+  }
+
+  .likes-counter {
+    display: none;
+  }
+
+  header nav {
+    flex-direction: row;
+    width: auto;
+    gap: var(--space-2);
+  }
+
+  main {
+    padding: var(--space-6);
+  }
+
+  .profile-card img {
+    width: 210px;
+    height: 210px;
+  }
+
+  main > section {
+    padding: var(--space-6);
+  }
+}
