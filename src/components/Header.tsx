@@ -29,6 +29,7 @@ function Header({ name, subtitle }: HeaderProps) {
           </NavLink>
           <NavLink to="/skills">Skills</NavLink>
           <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </nav>
       </div>
     </header>
