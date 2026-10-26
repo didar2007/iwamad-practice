@@ -1,14 +1,15 @@
-import { NavLink } from "react-router";
-import { useLikes } from "../context/LikesContext";
-import logo from "../assets/logo.svg";
+
+import { NavLink } from 'react-router'
+import { useLikes } from '../context/LikesContext'
+import logo from '../assets/logo.svg'
 
 type HeaderProps = {
-  name: string;
-  subtitle: string;
-};
+  name: string
+  subtitle: string
+}
 
 function Header({ name, subtitle }: HeaderProps) {
-  const { likes } = useLikes();
+  const { likes } = useLikes()
 
   return (
     <header>
@@ -27,13 +28,26 @@ function Header({ name, subtitle }: HeaderProps) {
           <NavLink to="/" end>
             Home
           </NavLink>
-          <NavLink to="/skills">Skills</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/register">Register</NavLink>
+
+          <NavLink to="/skills">
+            Skills
+          </NavLink>
+
+          <NavLink to="/contact">
+            Contact
+          </NavLink>
+
+          <NavLink to="/register">
+            Register
+          </NavLink>
+
+          <NavLink to="/events">
+            Events
+          </NavLink>
         </nav>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
